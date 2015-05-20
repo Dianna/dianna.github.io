@@ -47,6 +47,3 @@ Why It's Amazing and You Should Try It
 Pair programming forces you to take the abstract concepts flying from your brain to your fingers and convert those ideas into words. It sounds easy, but this is an illuminating process for both of you. It's can be easy to code even if your grasp on many concepts is tentative. When you find yourself at a loss for words that should be a red flag. Has your logic diverged with the code you've written? Maybe you're unclear on terminology which is necessary when working with a team of engineers. You're also more likely to realize logic or syntax mistakes as you're writing your program. 
 
 Think of pair programming as real-time rubber ducky debugging, but with a helpful partner who can help point those out and probably help you solve them.
-
-
-![_config.yml]({{ site.baseurl }}/images/config.png)
