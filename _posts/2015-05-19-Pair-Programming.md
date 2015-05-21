@@ -5,7 +5,7 @@ published: true
 ---
 
 
-## What Pair Programming Is
+## About Pair Programming
 
 Actually, it's pretty much exactly what it sounds like- working with a fellow code enthusiast, be that a coworker, friend or fellow student.
 
