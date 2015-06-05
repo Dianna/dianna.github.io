@@ -3,7 +3,7 @@ layout: post
 title: "The Fibonacci Sequence- Understanding algorithms"
 published: true
 ---
-
+Note: This post is under repair! Should be formatted shortly.
 ##When would recursion be useful?
 At its core, what makes a recursive function a recursive function is that it will, 
 at least in some cases, call itself with new information to be processed. This structure 
