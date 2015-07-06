@@ -87,26 +87,26 @@ Let’s imagine our previous scenario of an input 4, expecting 3. We would call 
 findFibonacci on the indexes 3 and 2:
 {% highlight javascript %}
 We call findFibonacci(4) —>
-Stack 1-     findFibonacci(4) returns findFibonacci(3) + findFibonacci(2)
+Stack 1-  findFibonacci(4) returns findFibonacci(3) + findFibonacci(2)
 {% endhighlight %}
 Each of these function calls would return functions as well:
 (Note: The number of the stack symbolizes how far into our recursive function we’ve delved 
 in finding our answer. The colors match their return values deeper in the stack.)
 {% highlight javascript %}
-Stack 2-     findFibonacci(3) returns findFibonacci(2) + findFibonacci(1)
-Stack 2-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
+Stack 2-  findFibonacci(3) returns findFibonacci(2) + findFibonacci(1)
+Stack 2-  findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
 {% endhighlight %}
 Our function calls that have 1 or 0 passed will return that value:
 {% highlight javascript %}
-Stack 3-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
-Stack 3-     findFibonacci(1) returns 1
-Stack 3-     findFibonacci(1) returns 1
-Stack 3-     findFibonacci(0) returns 0
+Stack 3-  findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
+Stack 3-  findFibonacci(1) returns 1
+Stack 3-  findFibonacci(1) returns 1
+Stack 3-  findFibonacci(0) returns 0
 {% endhighlight %}
 Those final calls will return their respective values:
 {% highlight javascript %}
-Stack 4-     findFibonacci(1) returns 1
-Stack 4-     findFibonacci(0) returns 0
+Stack 4-  findFibonacci(1) returns 1
+Stack 4-  findFibonacci(0) returns 0
 {% endhighlight %}
 The value that is found at any of these stacks is added to its pair and then returned 
 (passed back up the stack to the function that originally called it):
