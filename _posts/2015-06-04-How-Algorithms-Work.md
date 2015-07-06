@@ -3,7 +3,6 @@ layout: post
 title: "The Fibonacci Sequence- Understanding algorithms"
 published: true
 ---
-Note: This post is under repair! Should be formatted shortly.
 ##When would recursion be useful?
 At its core, what makes a recursive function a recursive function is that it will, 
 at least in some cases, call itself with new information to be processed. This structure 
@@ -53,21 +52,21 @@ Imagine our user inputs 4. The output should be 3 (the sum of the two previous v
 abstract those values to their indexes, where n = the index of 3 in the sequence and the 
 numbers bellow correspond to the values and those indexes:
 {% highlight javascript %}
-     idx2        idx3     idx4
-   ( n - 2 ) + ( n - 1 ) =  n
-       1     +     2     =  3
+  idx2        idx3     idx4
+( n - 2 ) + ( n - 1 ) =  n
+    1     +     2     =  3
 {% endhighlight %}  
 We can do this process for both 1 and 2 as well:
 {% highlight javascript %}
 For 1:                                   For 2:
-     idx0        idx1     idx2               idx1       idx2     idx3
-  ( n - 2 ) + ( n - 1 ) =  n              ( n - 2 ) + ( n - 1 ) =  n
-      0     +     1     =  1                  1     +     1     =  2
+  idx0        idx1     idx2               idx1       idx2     idx3
+( n - 2 ) + ( n - 1 ) =  n              ( n - 2 ) + ( n - 1 ) =  n
+    0     +     1     =  1                  1     +     1     =  2
 {% endhighlight %}
 You may notice that if we add everything on the left side of those two equations, we still 
 get 3:
 {% highlight javascript %}
-   0 + 1 + 1 + 1 = 3
+0 + 1 + 1 + 1 = 3
 {% endhighlight %}
 Lets use this knowledge to our advantage. To find the value at the input index, we must 
 calculate all the values that added together to create the two before it and the two that 
@@ -80,33 +79,33 @@ var findFibonacci = function(index){
   if ( index < 2 ){
     return index;
   }
-  return findFibonacci( index - 2 ) + findFibonacci( index - 1 );
+  return findFibonacci(index - 2) + findFibonacci(index - 1);
 }
 {% endhighlight %}
 Let’s imagine our previous scenario of an input 4, expecting 3. We would call the 
 findFibonacci on the indexes 3 and 2:
 {% highlight javascript %}
-  We call findFibonacci(4) —>
-  Stack 1-     findFibonacci(4) returns findFibonacci(3) + findFibonacci(2)
+We call findFibonacci(4) —>
+Stack 1-     findFibonacci(4) returns findFibonacci(3) + findFibonacci(2)
 {% endhighlight %}
 Each of these function calls would return functions as well:
 (Note: The number of the stack symbolizes how far into our recursive function we’ve delved 
 in finding our answer. The colors match their return values deeper in the stack.)
 {% highlight javascript %}
-  Stack 2-     findFibonacci(3) returns findFibonacci(2) + findFibonacci(1)
-  Stack 2-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
+Stack 2-     findFibonacci(3) returns findFibonacci(2) + findFibonacci(1)
+Stack 2-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
 {% endhighlight %}
 Our function calls that have 1 or 0 passed will return that value:
 {% highlight javascript %}
-  Stack 3-     findFibonacci(2)  returns findFibonacci(1) + findFibonacci(0)
-  Stack 3-     findFibonacci(1) returns 1
-  Stack 3-     findFibonacci(1) returns 1
-  Stack 3-     findFibonacci(0) returns 0
+Stack 3-     findFibonacci(2)  returns findFibonacci(1) + findFibonacci(0)
+Stack 3-     findFibonacci(1) returns 1
+Stack 3-     findFibonacci(1) returns 1
+Stack 3-     findFibonacci(0) returns 0
 {% endhighlight %}
 Those final calls will return their respective values:
 {% highlight javascript %}
-  Stack 4-     findFibonacci(1) returns 1
-  Stack 4-     findFibonacci(0) returns 0
+Stack 4-     findFibonacci(1) returns 1
+Stack 4-     findFibonacci(0) returns 0
 {% endhighlight %}
 The value that is found at any of these stacks is added to its pair and then returned 
 (passed back up the stack to the function that originally called it):
@@ -114,7 +113,7 @@ The value that is found at any of these stacks is added to its pair and then ret
 From Stack 4 we return 1 and 0 to the findFibonacci(2) that called it which adds them to 1
 
 From Stack 3 we return 1  and 0 to the findFibonacci(2) that called it which adds them to 1
-            we return 1 and the 1 from stack 4 to the findFibonacci(3) that called it & adds to 2
+             we return 1 and the 1 from stack 4 to the findFibonacci(3) that called it & adds to 2
 {% endhighlight %}
 From Stack 2 we return the added values from stack 3 ( 1 and 2 ) 
 which findFibonacci(4) at Stack 1 evaluates to our final output, 3 and returns. 
