@@ -27,7 +27,7 @@ recursion.
 ###Here’s the start of the sequence for your reference: 0,1,1,2,3,5,8,12
 
 Here’s our skeleton code:
-```javascript
+```
 // Our function takes an index of the number
 var findFibonacci = function(index){
   return value; // it returns the value of the number at that index in the sequence
@@ -38,7 +38,7 @@ a good time to consider edge cases. Since the fibonacci sequence is created by a
 last two numbers calculated to get the next number, we must have two numbers to start with. 
 These will be 0 and 1 respectively. To keep this code simple, we’ll assume our user isn’t 
 evil, and won’t input a negative number:
-```javascript
+```
 var findFibonacci = function(index){  
   if ( index < 2 ){               // Edge cases: This condition catches indexes 0 and 1  
     return index;                // We return index because the value happens to be the same  
@@ -52,13 +52,13 @@ works and construct our recursive function from there:
 Imagine our user inputs 4. The output should be 3 (the sum of the two previous values). Lets 
 abstract those values to their indexes, where n = the index of 3 in the sequence and the 
 numbers bellow correspond to the values and those indexes:
-```javascript
+```
      idx2        idx3     idx4
    ( n - 2 ) + ( n - 1 ) =  n
        1     +     2     =  3
 ```  
 We can do this process for both 1 and 2 as well:
-```javascript
+```
 For 1:                                   For 2:
      idx0        idx1     idx2               idx1       idx2     idx3
   ( n - 2 ) + ( n - 1 ) =  n              ( n - 2 ) + ( n - 1 ) =  n
@@ -66,7 +66,7 @@ For 1:                                   For 2:
 ```
 You may notice that if we add everything on the left side of those two equations, we still 
 get 3:
-```javascript
+```
    0 + 1 + 1 + 1 = 3
 ```
 Lets use this knowledge to our advantage. To find the value at the input index, we must 
@@ -75,7 +75,7 @@ added together to make those two values and so forth. In the end, we can imagine
 finding the path of 0s and 1s that lead to this value. Don’t worry if that seems obscure, 
 it’s a higher level view of what our code will be accomplishing. For now I’ll add this 
 concept to our code and we’ll break it down afterwards into a series of computations:
-```javascript
+```
 var findFibonacci = function(index){
   if ( index < 2 ){
     return index;
@@ -85,32 +85,32 @@ var findFibonacci = function(index){
 ```
 Let’s imagine our previous scenario of an input 4, expecting 3. We would call the 
 findFibonacci on the indexes 3 and 2:
-```javascript
+```
   We call findFibonacci(4) —>
   Stack 1-     findFibonacci(4) returns findFibonacci(3) + findFibonacci(2)
 ```
 Each of these function calls would return functions as well:
 (Note: The number of the stack symbolizes how far into our recursive function we’ve delved 
 in finding our answer. The colors match their return values deeper in the stack.)
-```javascript
+```
   Stack 2-     findFibonacci(3) returns findFibonacci(2) + findFibonacci(1)
   Stack 2-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
 ```
 Our function calls that have 1 or 0 passed will return that value:
-```javascript
+```
   Stack 3-     findFibonacci(2)  returns findFibonacci(1) + findFibonacci(0)
   Stack 3-     findFibonacci(1) returns 1
   Stack 3-     findFibonacci(1) returns 1
   Stack 3-     findFibonacci(0) returns 0
 ```
 Those final calls will return their respective values:
-```javascript
+```
   Stack 4-     findFibonacci(1) returns 1
   Stack 4-     findFibonacci(0) returns 0
 ```
 The value that is found at any of these stacks is added to its pair and then returned 
 (passed back up the stack to the function that originally called it):
-```javascript
+```
 From Stack 4 we return 1 and 0 to the findFibonacci(2) that called it which adds them to 1
 
 From Stack 3 we return 1  and 0 to the findFibonacci(2) that called it which adds them to 1
