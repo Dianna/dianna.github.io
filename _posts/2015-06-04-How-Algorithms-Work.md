@@ -50,16 +50,17 @@ works and construct our recursive function from there:
 
 Imagine our user inputs 4. The output should be 3 (the sum of the two previous values). Lets 
 abstract those values to their indexes, where n = the index of 3 in the sequence and the 
-numbers bellow correspond to the values and those indexes:
+numbers bellow correspond to the values and those indeces:
 {% highlight javascript %}
-  idx2        idx3     idx4
+// Input is 4
+// idx2        idx3     idx4
 ( n - 2 ) + ( n - 1 ) =  n
     1     +     2     =  3
 {% endhighlight %}  
 We can do this process for both 1 and 2 as well:
 {% highlight javascript %}
-For 1:                                   For 2:
-  idx0        idx1     idx2               idx1       idx2     idx3
+// Input is 1:                          Input is 2:
+// idx0        idx1     idx2               idx1       idx2      idx3
 ( n - 2 ) + ( n - 1 ) =  n              ( n - 2 ) + ( n - 1 ) =  n
     0     +     1     =  1                  1     +     1     =  2
 {% endhighlight %}
@@ -97,7 +98,7 @@ Stack 2-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
 {% endhighlight %}
 Our function calls that have 1 or 0 passed will return that value:
 {% highlight javascript %}
-Stack 3-     findFibonacci(2)  returns findFibonacci(1) + findFibonacci(0)
+Stack 3-     findFibonacci(2) returns findFibonacci(1) + findFibonacci(0)
 Stack 3-     findFibonacci(1) returns 1
 Stack 3-     findFibonacci(1) returns 1
 Stack 3-     findFibonacci(0) returns 0
