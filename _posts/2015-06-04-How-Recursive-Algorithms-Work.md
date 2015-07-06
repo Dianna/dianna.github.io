@@ -23,7 +23,7 @@ the value at that index (0) and if we input 5 we would expect to receive 8. This
 fantastically mundane task of indefinitely long addition is a perfect candidate for 
 recursion.
 
-###Here’s the start of the sequence for your reference: 0,1,1,2,3,5,8,12
+###Here’s the start of the sequence for your reference: 0,1,1,2,3,5,8,13
 
 Here’s our skeleton code:
 {% highlight javascript %}
