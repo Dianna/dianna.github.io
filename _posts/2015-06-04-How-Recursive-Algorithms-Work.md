@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Fibonacci Sequence- Understanding algorithms"
+title: "The Fibonacci Sequence- Understanding recursive algorithms"
 published: true
 ---
 ##When would recursion be useful?
