@@ -11,10 +11,12 @@ The way Node handles an indefinite number of requests with a single event loop i
   
 ###The Node.js philosophy  
 To make the above process possible, each function that handles a request must have a callback to execute when processing is complete (or to string together a series of processes). Part of what makes this possible is JavaScript's "closure" support (access to outer scopes' variables). This is important because Node events are executed independently and these functions need to maintain state to be logical in this non-linear (asynchronous) environment. This makes Node a fantastic option for app's that are I/O dependent and intensive (e.g. chat, data-streaming, file uploading); however, Node may not be the best option for incredibly CPU intensive apps as it is difficult to scale beyond a single CPU core.  
+
 An added benefit of using Node and therefore JavaScript server-side is the ability to create isomorphic apps. This allows the developer to use one environment which, combined with treatment of JSON as a first class data structure, can drastically cut latency and facilitate easier debugging.  
   
 ###Resources
 If you're looking for more information, I found the following posts extremely helpful in getting up to speed on Node. I highly recomend Shubhra Kar's [podcast on Node](http://www.se-radio.net/2015/06/episode-230-shubhra-khar-on-nodejs/ "node podcast")  
+
 Further Resources:  
 - On how [single-threaded non-blocking IO model](http://stackoverflow.com/questions/14795145/how-the-single-threaded-non-blocking-io-model-works-in-node-js) works  
 - Further understanding the [non-blocking IO model](http://stackoverflow.com/questions/18040366/understanding-nodejs-non-blocking-io)  
