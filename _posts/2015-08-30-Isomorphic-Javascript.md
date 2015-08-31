@@ -3,7 +3,6 @@ layout: post
 title: "Isomorphic JavaScript"
 published: true
 ---
-
 ###Getting up to speed  
 Isomorphic JavaScript apps are rising rapidly in popularity bringing a slew of benefits to their creators when correctly implemented. So what is an "isomorphic" app anyways? This concept in itself is simple: An isomorphic app can run both client- and server-side, and is essential to understand in order to get the full benefits of many newer frameworks and their possible combinations (e.g. browserify with node.js and React, or meteor, or rendr which integrates with Backbone.js apps). To better understand the increasing reputation of these frameworks let's check out some of the benefits of being able to run javascript on both the server and the browser.  
   
