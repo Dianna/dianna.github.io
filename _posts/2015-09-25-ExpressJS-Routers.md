@@ -64,7 +64,6 @@ Now when our server receives a request with a url "/insults/smarmy" the server d
 
 {% highlight javascript %}
 // inults/insultsRoutes.js
-
 module.exports = function(insultRouter){
   insultRouter.get('/smarmy', function(req, res){
     res.json('Came back for another one did you meat man? I\'d say you have a screw loose, but you seem to have lost all your screws.');
