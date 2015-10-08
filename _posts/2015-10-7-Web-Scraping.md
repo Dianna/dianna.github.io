@@ -10,7 +10,6 @@ Web scraping is a powerful technique that allows you to get the data you need by
 ###Tools for your quest
 Since scraping is easiest to implement on simple sites (at least in layout) that see little change over time, we'll use a [Wikipedia site](https://en.wikipedia.org/wiki/List_of_paintings_by_Rembrandt) for this exercise that contains a fairly uniform table. We'll be grabbing the image url and title.
 
-#First steps
 You'll need to npm install request and cheerio. Of particular interest, cheerio allows you to use jQuery like commands to traverse imported HTML... on your server. We'll assume your server is set up.
 
 {% highlight javascript %}
@@ -68,7 +67,7 @@ app.get('/scrape', function (req, res, next) {
 
 I threw the console log in to give you an idea of what we're interacting with. One of these "aElement"s shows up on your terminal as:
 
-{% highlight javascript %}
+{% highlight bash %}
 { '0':
    { type: 'tag',
      name: 'a',
