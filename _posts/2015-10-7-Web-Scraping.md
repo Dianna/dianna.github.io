@@ -94,7 +94,32 @@ I threw the console log in to give you an idea of what we're interacting with. O
   _root: [Circular] }
 {% endhighlight %}
 
-You might notice the it has children, next, prev, and parent- all things we'd expect to be able to use with jQuery.
+You might notice it has children, next, prev, and parent- all things we'd expect to be able to use with jQuery. In this next section of code, let's use our newfound powers to grab the imageURL and title by using every "a" tag with a class of image as our starting point.
 
+{% highlight javascript %}
+// server.js highlight
+var request = require('request');
+var cheerio = require('cheerio');
 
-I'll be finishing up this post tomorrow as I have an insatiable need to hack. More to come!
+app.get('/scrape', function (req, res, next) {
+  var url = 'https://en.wikipedia.org/wiki/List_of_paintings_by_Rembrandt';
+  request(url, function(error, response, html){
+    if(!error){
+      var paintings = [];
+      var $ = cheerio.load(html);
+      $('a.image').each(function(i, element){
+        var json = { imageURL: "", title: ""};
+        json.imageURL = "https:" + $(this).children().attr('src');
+        json.title = $(this).parent().next().text();
+        paintings.push(json);
+      });
+      sendPaintings(paintings);
+    }
+  });
+  var sendPaintings = function(data){
+    res.send(data);
+  };
+}
+{% endhighlight %}
+
+Awesome! You can now use your custom built JSON object to create a pretty snazzy art gallery.
