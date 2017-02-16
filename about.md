@@ -10,4 +10,4 @@ I love working with a modern tech stack and have coded most extensively using An
 
 I take long term implications when I code seriously and will always advocate for having a plan and adjusting it as necessary rather than flying blind—that means I can produce high quality code quickly. I thrive in environments where communication is open and autonomy is expected. When I tackle a problem I like to explore its source and a variety of solutions, running through potential side effects before touching the keyboard. I enjoy the whole scope of engineering from managing new feature development to digging into a gnarly bug.
 
-You can reach me to discuss remote opportunities at diannafaulk@gmail.com.
+You can reach me to discuss remote opportunities at <diannafaulk@gmail.com>.

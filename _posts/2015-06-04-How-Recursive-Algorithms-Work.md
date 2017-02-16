@@ -3,7 +3,7 @@ layout: post
 title: "The Fibonacci Sequence- Understanding recursive algorithms"
 published: true
 ---
-##When would recursion be useful?
+## When would recursion be useful?
 At its core, what makes a recursive function a recursive function is that it will, 
 at least in some cases, call itself with new information to be processed. This structure 
 shines when working with tree-data structures, permutations or repetitive mathematical 
@@ -15,7 +15,7 @@ we must perform a mundane calculation. The goal of this function can be threefol
 local information that is eventually returned, causing a side effect (e.g. console-logging), 
 or both. The goal of this post is to examine the inner workings of a recursive function.
 
-##Our candidate: the Fibonacci sequence
+## Our candidate: the Fibonacci sequence
 Let’s take a look at the Fibonacci sequence in which a number in the sequence is equal to 
 the sam of the two values before it. For this exercise we’ll try to find the value of a 
 fibonacci number at a random place in the sequence. If we input 0 we would expect to receive 
@@ -23,7 +23,7 @@ the value at that index (0) and if we input 5 we would expect to receive 8. This
 fantastically mundane task of indefinitely long addition is a perfect candidate for 
 recursion.
 
-###Here’s the start of the sequence for your reference: 0,1,1,2,3,5,8,13
+### Here’s the start of the sequence for your reference: 0,1,1,2,3,5,8,13
 
 Here’s our skeleton code:
 {% highlight javascript %}

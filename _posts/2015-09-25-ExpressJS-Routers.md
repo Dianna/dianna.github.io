@@ -4,10 +4,10 @@ title: "Express.js Routers"
 published: true
 ---
 
-###Express Routing Basics
+### Express Routing Basics
 When you create a basic server with Express, it comes with a built in router. This is great for getting started on your full-stack app, but as your backend service needs grow, your middleware can start to look pretty crowded. To keep code modular, the Express Router method can be used.
 
-###Getting Started
+### Getting Started
 Let's go ahead and create our simple server. This assumes you already have Express installed.
 
 {% highlight javascript %}

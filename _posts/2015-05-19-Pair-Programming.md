@@ -11,23 +11,25 @@ It's pretty much exactly what it sounds like- working with a fellow code enthusi
 
 ## Goals  
 
--Improve technical communication- a valuable skill for interviews  
--Learn to express your points of confusion- important for team engineering, especially when specialties differ  
--Build confidence in your ability to contribute to a team  
--Become a more collaborative, communicative leader
+- Improve technical communication- a valuable skill for interviews  
+- Learn to express your points of confusion- important for team engineering, especially when specialties differ  
+- Build confidence in your ability to contribute to a team  
+- Become a more collaborative, communicative leader
 
 
 ## How to Make This Pair Thing Work  
 
-###Before you begin:
+### Before you begin:  
+
 Outline a general plan by whiteboarding or simply discussing concepts. This is the chance to choose a general starting path and clear up potential misunderstanding of the project's goals.
-###The dynamic:
+### The dynamic:  
+
   A useful dichotomy from the get go is establishing _fluid_ "driver" and "navigator" roles  
   
-  -Driver: Types what the navigator is guiding. It's important to think about why the navigator is designing the
+  - Driver: Types what the navigator is guiding. It's important to think about why the navigator is designing the
   code as he is. Driving shouldn't be a passive role, nor should it be reserved for the less experienced coder.   
   
-  -Navigator: Guides the driver on what to type. Can ask the driver for suggestions and should be explaining the 
+  - Navigator: Guides the driver on what to type. Can ask the driver for suggestions and should be explaining the 
   decisions as she makes them.  
     
   Remember these roles are fluid- this isn't a permanent role for your coding session, rather a hat you're putting on
@@ -53,7 +55,7 @@ __Senior Coder__
   favorite professor. Consider this a chance to develop your technical communication skills.  
 
 
-##Why It's Amazing and You Should Try It  
+## Why It's Amazing and You Should Try It  
 
 Pair programming forces you to take the abstract concepts flying from your brain to your fingers and convert those ideas into words. That may sound easy, but this can be an illuminating process for both you and your partner. It can be easy to code even if your grasp on many concepts is tentative, so when you find yourself at a loss for words let that be a red flag. Has your logic diverged with the code you've written? Maybe you're unclear on terminology, which is necessary when working with a team of developers. You're also more likely to realize logic or syntax mistakes as you're writing your program, and pick up new keyboard shortcuts or just generally gain a better understanding of the problem at hand.  
 

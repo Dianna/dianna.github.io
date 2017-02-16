@@ -4,7 +4,7 @@ title: "Column Constraints and Foreign Keys"
 published: true
 ---
 
-###The Weird Problem
+### The Weird Problem
 Coming into a new project recently, I decided to handle the initial database creation for my team. Our project required relational data, so we went with MySQL, using Bookshelf.js with Knex.js as the ORM. I'd had previous experience with MySQL, but less with Bookshelf.js. I quickly ran into a problem that I just couldn't solve. For the life of me I could not use the primary key of one table as the foreign key in another and without that, my relational database would have no relations. As you have likely come to realize, this problem was not supposed to be the difficult to solve problem I'd forseen in the project. Rather it had crept, insidiously into my database and stalled further progress. Here's a simplified version a users and transactions table:
 
 Broken Code:
@@ -21,7 +21,7 @@ db.schema.createTable('transactions', function(transaction){
 
 In the model files I defined the two tables one to many and many to one relationship respectively, but the foreign key columns of the transactions table still showed no relation to the users table. After an hour of grinding on the problem another programmer suggest I try adding .unsigned() to the foreign key columns. He said this had worked for him but he didn't know why. Sure enough, it worked for me to... but why?
 
-###The Solution
+### The Solution
 Fixed Code:
 {% highlight javascript %}
 db.schema.createTable('users', function(user){
