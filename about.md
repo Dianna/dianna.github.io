@@ -3,8 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
-I'm a fullstack software engineer currently with a strong JavaScript background. Most recently I worked with a four person engineering team creating a peer to peer energy sales platform integrated with smart meters to control and monitor energy use (We used React, Flux, Node.js with Express, MySQL with Bookshelf.js, socket.io and a hardware prototype).  
-  
-Some other projects inlude analyzing classroom data and visualizing the results using Dimple.js/D3 as well as a deep dive into AngularJS and Ionic with an interactive mobile conference app. I constantly push my limits by learning new frameworks and languages and striving for deeper understanding of the technology I use.  
-  
-In my off-computer life my three big loves are reading, cooking and backpacking. Last year I completed a 2184 mile backpack trip on the Appalachian Trail. Eventually I hope to complete my triple crown by hiking the PCT and CDT (~5700 miles to go)!  
+
+I am a front-end engineer with a strong JavaScript background looking for remote opportunities. 
+
+I love working with a modern tech stack and have coded most extensively using AngularJS. Recently I've been getting back into React and using ES6. My experience also extends to back-end tech such as Node.js and MySQL. I’m open to learning other frameworks and languages, chances are if it’s a major JS framework, I’ve worked with it before.
+
+I take long term implications when I code seriously and will always advocate for having a plan and adjusting it as necessary rather than flying blind—that means I can produce high quality code quickly. I thrive in environments where communication is open and autonomy is expected. When I tackle a problem I like to explore its source and a variety of solutions, running through potential side effects before touching the keyboard. I enjoy the whole scope of engineering from managing new feature development to digging into a gnarly bug.
+
+You can reach me to discuss remote opportunities at diannafaulk@gmail.com.
