@@ -4,9 +4,7 @@ title: "Simple Intro to ES6 Classes"
 published: true
 ---
 
-**Heads up, this post assumes that you are already familiar with JS classes and prototypal inheritance. If you need a refresher, [check this out](http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/)**
-
-ES6 classes are not too much of a leap from what you’re already familiar with. They just make life easier through syntactic sugar. When I switched my development back from Angular to React, this time with ES6, I could immediately see how much clearer and succinct my code was—not to mention the helpful exceptions thrown whenever I tried to use it incorrectly.
+ES6 classes are not too much of a leap from [what you’re already familiar with](http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/). They just make life easier through syntactic sugar. When I switched my development back from Angular to React, this time with ES6, I could immediately see how much clearer and succinct my code was—not to mention the helpful exceptions thrown whenever I tried to use it incorrectly.
 
 ### ES6 Class Advantages
 - Throws exception automatically if not used correctly (i.e. no *this* context because *new* wasn’t used or *super* wasn’t called. More on that coming up)
@@ -51,10 +49,10 @@ kayak.describe(); // Error: kayak.describe is not a function
 
 ES6 also introduces static methods, which exist on the constructor method itself, rather than an instance of the class.
 
-#### Creating a subclass
+### Creating a subclass
 One of the more exciting developments in ES6 classes is *extends*. This allows you to create a subclass of an existing class. What’s so awesome about that is you can easily create your own subclass using a native standard object such as Array, Object or Math as the base class. Your subclass will then inherit all the built in prototype methods from the base class. That means you can easily create custom collections from Array with specialized getters, setters and sorts for the type of data you’re expecting, or perhaps add specialized methods to Math. We’ll get into that in my next post. Let’s start simple by extending our *Boat* class.
 
-### Using *extends* and *super*
+#### Using *extends* and *super*
 Just like an ES5 subclass, an ES6 class will inherit any properties or methods of the parent. I’ll show you the code first and then unpack what’s happening here.
 
 {% highlight javascript %}
@@ -73,7 +71,7 @@ The *extends* keyword simply derives the class *Dinghy* from the base class *Boa
 
 Neither the *constructor* nor *super* function are required when deriving a class; however, the *constructor* function is necessary to add further properties and a call to *super* is required if you need to reference the base class. So if you’re just adding further prototype methods, you can skip that step. Wait, we haven’t gone over those.
 
-#### Creating and Extending Prototype Methods
+### Creating and Extending Prototype Methods
 Adding a prototype method to the Boat class after it’s defined is the same in ES6 as ES5; however, if you wanted to define a method as you’re declaring the class, that would look like this:
 
 {% highlight javascript %}
